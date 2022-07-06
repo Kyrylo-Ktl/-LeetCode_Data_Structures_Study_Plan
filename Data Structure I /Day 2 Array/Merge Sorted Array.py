@@ -2,6 +2,11 @@ from typing import List
 
 
 class Solution:
+    """
+    Time:   O(n + m)
+    Memory: O(1)
+    """
+
     def merge(self, first: List[int], n: int, second: List[int], m: int) -> None:
         i, j = n - 1, m - 1
 

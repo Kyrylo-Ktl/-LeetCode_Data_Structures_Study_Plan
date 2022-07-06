@@ -2,11 +2,21 @@ from typing import List
 
 
 class Solution:
+    """
+    Time:   O(n)
+    Memory: O(n)
+    """
+
     def containsDuplicate(self, nums: List[int]) -> bool:
         return len(set(nums)) != len(nums)
 
 
 class Solution:
+    """
+    Time:   O(n)
+    Memory: O(n)
+    """
+
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen = set()
 

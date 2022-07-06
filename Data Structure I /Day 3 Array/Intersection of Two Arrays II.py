@@ -4,7 +4,7 @@ from typing import List
 
 class Solution:
     """
-    Time:   O(max(n, m))
+    Time:   O(n + m)
     Memory: O(n + m)
     """
 
@@ -15,7 +15,7 @@ class Solution:
 
 class Solution:
     """
-    Time:   O(max(nlog(n), mlog(m)))
+    Time:   O(nlog(n) + mlog(m))
     Memory: O(1)
     """
 
