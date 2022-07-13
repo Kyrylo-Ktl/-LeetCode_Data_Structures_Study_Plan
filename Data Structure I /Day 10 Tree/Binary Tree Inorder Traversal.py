@@ -1,0 +1,46 @@
+from typing import List, Optional
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+class Solution:
+    """
+    Time:   O(n)
+    Memory: O(n)
+    """
+
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        inorder = []
+        stack = []
+
+        while stack or root is not None:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                node = stack.pop()
+                inorder.append(node.val)
+                root = node.right
+
+        return inorder
+
+
+class Solution:
+    """
+    Time:   O(n)
+    Memory: O(n)
+    """
+
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        return list(self.inorder_generator(root))
+
+    def inorder_generator(self, tree: Optional[TreeNode]):
+        if tree is not None:
+            yield from self.inorder_generator(tree.left)
+            yield tree.val
+            yield from self.inorder_generator(tree.right)
